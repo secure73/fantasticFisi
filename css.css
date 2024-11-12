@@ -1,3 +1,112 @@
-body{
-    background-color: black;
+/* Allgemeine Einstellungen für alle Elemente */
+* {
+    margin: 0; /* Setzt alle Außenabstände (Ränder) auf 0 */
+    padding: 0; /* Setzt alle Innenabstände (Abstände innerhalb des Elements) auf 0 */
+    box-sizing: border-box; /* Bezieht Padding und Rahmen in die Gesamtbreite und -höhe des Elements ein */
+}
+
+/* Grundstil für die gesamte Seite */
+body {
+    font-family: Arial, sans-serif; /* Legt die Schriftart auf Arial oder eine serifenlose Alternative fest */
+    line-height: 1.6; /* Setzt den Zeilenabstand auf 1.6, um die Lesbarkeit zu verbessern */
+    background-color: #f0f0f0; /* Verleiht dem Seitenhintergrund eine helle graue Farbe */
+}
+
+/* Header-Stil für den oberen Bereich der Seite */
+.header {
+    background-color: #4CAF50; /* Setzt die Hintergrundfarbe des Headers auf Grün */
+    color: white; /* Setzt die Textfarbe im Header auf Weiß */
+    padding: 20px; /* Fügt dem Header 20 Pixel Innenabstand hinzu */
+    text-align: center; /* Zentriert den Text im Header */
+}
+
+.header h1 {
+    font-size: 2em; /* Erhöht die Schriftgröße des Haupttitels im Header */
+}
+
+.header p {
+    font-size: 1.2em; /* Setzt eine größere Schriftgröße für den Untertitel */
+}
+
+/* Navigationsmenü-Stil */
+.navbar {
+    background-color: #333; /* Setzt eine dunkle Farbe für das Navigationsmenü */
+    overflow: hidden; /* Verhindert, dass Inhalte über den Menübereich hinauslaufen */
+}
+
+.navbar ul {
+    list-style: none; /* Entfernt die standardmäßigen Listenpunkte */
+    display: flex; /* Nutzt Flexbox, um die Menüelemente horizontal anzuordnen */
+    justify-content: center; /* Zentriert die Menüelemente horizontal im Menübereich */
+    padding: 10px 0; /* Fügt dem Menübereich vertikale Innenabstände hinzu */
+}
+
+.navbar ul li {
+    margin: 0 15px; /* Fügt links und rechts von jedem Menüpunkt einen Abstand von 15 Pixeln hinzu */
+}
+
+.navbar ul li a {
+    color: white; /* Setzt die Linkfarbe auf Weiß */
+    text-decoration: none; /* Entfernt die Unterstreichung bei Links */
+    font-weight: bold; /* Setzt die Schrift auf fett für bessere Lesbarkeit */
+    padding: 10px; /* Fügt dem Linkelement Innenabstände hinzu */
+    transition: color 0.3s; /* Fügt eine Übergangsanimation für die Farbe hinzu */
+}
+
+.navbar ul li a:hover {
+    color: #4CAF50; /* Ändert die Linkfarbe beim Überfahren auf Grün */
+}
+
+/* Hauptinhalt und Layout mit einem Raster (Grid) */
+.main-content {
+    padding: 20px; /* Fügt dem Hauptinhalt 20 Pixel Innenabstand hinzu */
+}
+
+.grid-container {
+    display: grid; /* Aktiviert das Grid-Layout */
+    grid-template-columns: repeat(2, 1fr); /* Teilt den Container in zwei gleich große Spalten */
+    gap: 15px; /* Fügt zwischen den Gittern eine Lücke von 15 Pixeln hinzu */
+    margin: 20px 0; /* Fügt oben und unten Außenabstände zum Gitterbereich hinzu */
+}
+
+.grid-item {
+    background-color: #4CAF50; /* Setzt die Hintergrundfarbe jedes Gitterelements auf Grün */
+    color: white; /* Setzt die Textfarbe auf Weiß */
+    padding: 20px; /* Fügt den Gitterelementen Innenabstände hinzu */
+    text-align: center; /* Zentriert den Text innerhalb jedes Gitterelements */
+    border-radius: 5px; /* Macht die Ecken des Gitterelements abgerundet */
+}
+
+/* Stil für spezifische Abschnitte wie Über uns und Dienstleistungen */
+#about, #services {
+    margin-top: 20px; /* Fügt oben einen Abstand von 20 Pixeln hinzu */
+    padding: 15px; /* Fügt innen einen Abstand von 15 Pixeln hinzu */
+    background-color: #fff; /* Setzt den Hintergrund auf Weiß */
+    border: 1px solid #ddd; /* Fügt eine feine, graue Umrandung hinzu */
+    border-radius: 5px; /* Macht die Ecken des Bereichs abgerundet */
+}
+
+/* Footer-Stil für den unteren Bereich der Seite */
+.footer {
+    background-color: #333; /* Setzt die Hintergrundfarbe des Footers auf Dunkelgrau */
+    color: white; /* Setzt die Textfarbe im Footer auf Weiß */
+    text-align: center; /* Zentriert den Text im Footer */
+    padding: 10px; /* Fügt dem Footerbereich 10 Pixel Innenabstand hinzu */
+    margin-top: 20px; /* Fügt oben einen Abstand zum restlichen Inhalt hinzu */
+    font-size: 0.9em; /* Setzt eine etwas kleinere Schriftgröße für den Footertext */
+}
+
+/* Reaktionsfähige Einstellungen für Bildschirme unter 768 Pixel */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Ändert das Layout auf eine einzige Spalte für kleine Bildschirme */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Ordnet das Navigationsmenü vertikal an */
+    }
+
+    .navbar ul li {
+        margin: 5px 0; /* Setzt kleinere Abstände zwischen den Menüelementen */
+    }
 }
