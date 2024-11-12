@@ -1,0 +1,9 @@
+command:   git add .      add alle änderungen zu Git Repository
+                            beachten Sie bitte , add Bedeutet nicht das änderung kann Synch werden!!!!
+
+command: git commit -m "deine Nachricht!!!"   Kommitiert alle änderungen!
+
+command:    git push   sende Lokal datai an Original (Cloud) 
+
+command:    git pull (ladet alle neue änderungen unter)!
+
